@@ -1,4 +1,28 @@
 #!/usr/bin/python3
+
+#
+# ============= LICENSE =============
+#
+# Skrivet av: Edvard Thörnros
+# Email:      edvard@thornros.com
+# Datum:      2020-04-25
+#
+# Om du finner detta script användbart får du gärna typ, ge mig pengar,
+# fattig student liksom. Om du hittar något som inte fungerar är det
+# bara att skicka ett mail till edvard@thornros.com så tittar jag på det.
+# Du får gärna distrubura det till någon som eventuellt behöver det.
+# Jag är inte ansvarig för potentiell skada som detta script gör och om du
+# gör ändringar i det bör du även ändra denna text.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+# IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+# OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+# ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+# OTHER DEALINGS IN THE SOFTWARE.
+#
+
 import csv
 import sys
 import os
