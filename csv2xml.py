@@ -7,6 +7,10 @@
 # Email:      edvard@thornros.com
 # Datum:      2020-04-25
 #
+# Specifkt skriven för att användas med något av Volvos system, vet
+# inte vilket.
+#
+#
 # Om du finner detta script användbart får du gärna typ, ge mig pengar,
 # fattig student liksom. Om du hittar något som inte fungerar är det
 # bara att skicka ett mail till edvard@thornros.com så tittar jag på det.
