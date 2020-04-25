@@ -84,14 +84,27 @@ with open("data.csv", "rb") as f:
     preamble = b'<?xml version="1.0" encoding="utf-8"?><Parts xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">'
     out = open(dest_file, "wb+")
     out.write(preamble)
+    data_list = []
     for row in reader:
+        data_list.append(b"<Part>")
         for key in row:
-            if row[key]:
-                data = f"<{key}>{row[key]}</{key}>".encode()
+            if key == "DatabaseName":
+                db_name = row[key]
+            elif row[key]:
+                entry = row[key]
+                if key == "RecordType":
+                    entry = entry.zfill(3)
+                elif key == "SupplierNumber":
+                    entry = entry.zfill(5)
+                elif key == "
+                data = f"<{key}>{entry}</{key}>".encode()
                 data = translate_back(translations, data)
-                out.write(data)
+                data_list.append(data)
             else:
-                out.write(f"<{key} />".encode())
+                data_list.append(f"<{key} />".encode())
+        data_list.append(b"</Part>")
+    out.write(f"<DatabaseName>{db_name}</DatabaseName>".encode())
+    out.write(b"".join(data_list))
     out.write(b"</Parts>")
     tmp.close()
     os.remove(TMP_FILENAME)
